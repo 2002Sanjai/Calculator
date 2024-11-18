@@ -50,6 +50,10 @@ export default function App() {
     }
   },[value]);
 
+  const styleMethod = {
+    display:"flex",
+  }
+
   return (
       <div className='container'>
         <div className='calculator'>
@@ -57,31 +61,31 @@ export default function App() {
             <div className='display'>
               <input type='text' value={value} onChange={(e)=>setValue(e.target.value)} ref={inputRef}/>
             </div>
-            <div>
+            <div style={styleMethod}>
               <input type='button' value='AC' onClick={() => setValue('')} />
               <input type='button' value='DE' onClick={() => setValue(value.slice(0, -1))} />
               <input type='button' value='+/-' onClick={() => toggleSign()} />
               <input type='button' value='/' onClick={e => setValue(value + e.target.value)} />
             </div>
-            <div>
+            <div style={styleMethod}>
               <input type='button' value='7' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='8' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='9' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='*' onClick={e => setValue(value + e.target.value)} />
             </div>
-            <div>
+            <div style={styleMethod}>
               <input type='button' value='4' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='5' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='6' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='+' onClick={e => setValue(value + e.target.value)} />
             </div>
-            <div>
+            <div style={styleMethod}>
               <input type='button' value='1' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='2' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='3' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='-' onClick={e => setValue(value + e.target.value)} />
             </div>
-            <div>
+            <div style={styleMethod}>
               <input type='button' value='00' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='0' onClick={e => setValue(value + e.target.value)} />
               <input type='button' value='.' onClick={e => setValue(value + e.target.value)} />
